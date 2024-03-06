@@ -15,9 +15,13 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get("/register", [ContactController::class, "register"]);
+Route::post("/register", [ContactController::class, "createUser"]);
+
 
 Route::get("/login", [ContactController::class, "login"]);
 
 Route::get("/thanks", [ContactController::class, "thanks"]);
 
 Route::get("/", [ContactController::class, "contact"]);
+
+Route::get("/confirm", [ContactController::class, "confirm"]);

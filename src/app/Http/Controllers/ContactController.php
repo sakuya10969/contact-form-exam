@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use App\Models\User;
 
 class ContactController extends Controller
 {
@@ -10,6 +12,15 @@ class ContactController extends Controller
     {
         return view("register");
     }
+
+    public function createUser(ContactRequest $request)
+    {
+        $register = $request->only(["name", "email", "password"]);
+        User::create($register);
+        return redirect("/login");
+
+    }
+
 
     public function login()
     {
@@ -24,5 +35,10 @@ class ContactController extends Controller
     public function contact()
     {
         return view("contact");
+    }
+
+    public function confirm()
+    {
+        return view("confirm");
     }
 }
