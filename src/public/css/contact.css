@@ -1,0 +1,132 @@
+header {
+    height: 7vh;
+}
+
+.header-ttl {
+    text-align: center;
+    border-bottom:1px solid gainsboro;
+}
+
+.header-ttl h2 {
+    font-family: serif;
+    font-size: 30px;
+    color: rgb(110, 90, 75);
+    padding-top: 10px;
+}
+
+
+
+
+main {
+    height: 93vh;
+}
+
+.contact-form-heading {
+    text-align: center;
+}
+
+.contact-form-heading h2 {
+    font-family: serif;
+    font-size: 30px;
+    color: rgb(110, 90, 75);
+    padding-top: 20px;
+}
+
+table{
+    margin:0 auto;
+    width:900px;
+}
+
+th{
+    text-align:left;
+    font-family:serif;
+    color:rgb(110, 90, 75);
+    padding:15px 40px 15px 0;
+    white-space:nowrap;
+}
+
+td{
+    padding-left:40px;
+    white-space:nowrap;
+}
+
+.contact-form-btn{
+    text-align:center;
+}
+
+.confirm-btn{
+    background-color:rgb(110,90,75);
+    color:white;
+    border:none;
+    font-family:serif;
+    padding:5px 20px;
+    cursor:pointer;
+    margin:20px 0;
+}
+
+.rice{
+    color:red;
+}
+
+.hyphen{
+    margin:0 15px;
+}
+
+input{
+    border:none;
+    background-color:whitesmoke;
+    padding:10px 25px;
+    font-family:serif;
+    font-weight:bold;
+}
+
+.contact-form-name-input input{
+    margin-right:30px;
+    width:230px;
+}
+
+.contact-form-gender-input label{
+    margin-right:40px;
+    color:rgb(110, 90, 75);
+    font-family:serif;
+    font-weight:bold;
+}
+
+.contact-form-email-input input{
+    width:500px;
+}
+
+.contact-form-tel-input input{
+    width:138px;
+    text-align:center;
+}
+
+.contact-form-address-input input{
+    width:500px;
+}
+
+.contact-form-building-input input{
+    width:500px;
+}
+
+select{
+    width:240px;
+    padding:5px 20px;
+    background-color:whitesmoke;
+    color:dimgrey;
+    border:none;
+    font-family:serif;
+    font-weight:bold;
+}
+
+textarea{
+    width:500px;
+    height:160px;
+    background-color:whitesmoke;
+    border:none;
+    padding:15px 20px;
+    font-family:serif;
+    font-weight:bold;
+    resize:none;
+}
+

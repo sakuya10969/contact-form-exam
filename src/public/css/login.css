@@ -1,0 +1,96 @@
+header {
+    height: 7vh;
+}
+
+.header-ttl {
+    text-align: center;
+}
+
+.header-ttl h2 {
+    font-family: serif;
+    font-size: 30px;
+    color: rgb(110, 90, 75);
+    padding-top: 10px;
+}
+
+.header-btn {
+    text-align: right;
+    margin: -60px 30px 0 0;
+}
+
+.header-btn a {
+    color: burlywood;
+    text-decoration: none;
+    font-family: serif;
+    padding: 5px 15px;
+    border: 1px solid burlywood;
+    cursor:pointer;
+}
+
+
+
+
+
+main {
+    height: 93vh;
+    background-color: oldlace;
+}
+
+.login-form-heading {
+    text-align: center;
+}
+
+.login-form-heading h2 {
+    font-family: serif;
+    font-size: 30px;
+    color: rgb(110, 90, 75);
+    padding-top: 20px;
+}
+
+.login-form {
+    margin: 0 auto;
+    width: 600px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login-form-item-content {
+    margin-bottom: 40px;
+}
+
+.login-form-item-label span {
+    color: rgb(110, 90, 75);
+    font-family: serif;
+    font-weight: bold;
+}
+
+.login-form-item input {
+    width: 350px;
+    padding: 15px 20px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.login-form-btn {
+    margin-top: 20px;
+}
+
+.login-btn {
+    color: white;
+    font-family: serif;
+    background-color: rgb(110, 90, 75);
+    border: none;
+    padding: 5px 20px;
+    font-size: 15px;
+    cursor:pointer;
+}
+
+.login-form-error {
+    color: red;
+}
