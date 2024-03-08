@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{asset('css/register.css')}}">
     <title>Contact-form-exam</title>
 </head>
+
+
 
 <body>
 
@@ -19,6 +21,8 @@
         </div>
     </header>
 
+
+
     <main>
         <div class="register-form-content">
             <div class="register-form-heading">
@@ -26,7 +30,7 @@
             </div>
 
 
-            <form class="register-form" action="/login" method="post">
+            <form class="register-form" action="/register" method="post">
                 @csrf
                 <div class="register-form-item-content">
                     <div class="register-form-item">
@@ -37,7 +41,7 @@
                     </div>
                     <div class="register-form-error">
                         @error("name")
-                        {{message}}
+                        {{$message}}
                         @enderror
                     </div>
                 </div>
@@ -52,7 +56,7 @@
                     </div>
                     <div class="register-form-error">
                         @error("email")
-                        {{message}}
+                        {{$message}}
                         @enderror
                     </div>
                 </div>
@@ -63,11 +67,11 @@
                         <div class="register-form-item-label">
                             <span>パスワード</span>
                         </div>
-                        <input type="text" name="password" value="{{old('password')}}" placeholder="例:coachtech1106">
+                        <input type="text" name="password" placeholder="例:coachtech1106">
                     </div>
                     <div class="register-form-error">
                         @error("password")
-                        {{message}}
+                        {{$message}}
                         @enderror
                     </div>
                 </div>
@@ -75,8 +79,8 @@
                 <div class="register-form-btn">
                     <button class="register-btn" type="submit">登録</button>
                 </div>
-</form>
-        </form>
+            </form>
+        </div>
     </main>
 
 </body>

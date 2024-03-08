@@ -1,3 +1,8 @@
+body{
+    font-family:serif;
+    font-weight: bold;
+}
+
 .thanks-surface{
     display:flex;
     flex-direction:column;
@@ -8,8 +13,6 @@
 }
 
 .thanks-surface h2{
-    font-family:serif;
-    font-weight:bold;
     color:rgb(110,90,75);
 }
 
@@ -19,7 +22,6 @@
     color:white;
     background-color:rgb(110,90,75);
     padding:5px 20px;
-    font-family:serif;
     margin-top:20px;
     cursor:pointer;
 }
@@ -38,7 +40,6 @@
     color:rgba(110,90,75,0.1);
     text-align:center;
     white-space:nowrap;
-    font-family:serif;
     font-size:19vw;
 }
 

@@ -1,3 +1,8 @@
+body{
+    font-family:serif;
+    font-weight: bold;
+}
+
 header{
     height:7vh;
 }
@@ -7,7 +12,6 @@ header{
 }
 
 .header-ttl h2{
-    font-family:serif;
     font-size:30px;
     color:rgb(110,90,75);
     padding-top:10px;
@@ -21,7 +25,6 @@ header{
 .header-btn a{
     color:burlywood;
     text-decoration:none;
-    font-family:serif;
     padding:5px 15px;
     border: 1px solid burlywood;
     cursor:pointer;
@@ -50,7 +53,7 @@ main{
 .register-form{
     margin:0 auto;
     width:600px;
-    height:70%;
+    height:550px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -65,7 +68,6 @@ main{
 
 .register-form-item-label span{
     color:rgb(110,90,75);
-    font-family:serif;
     font-weight:bold;
 }
 
@@ -75,6 +77,8 @@ main{
     margin-top:10px;
     background-color:whitesmoke;
     border:none;
+    font-family:serif;
+    font-weight: bold;
 }
 
 .register-form-btn{
@@ -83,14 +87,16 @@ main{
 
 .register-btn{
     color:white;
-    font-family:serif;
     background-color: rgb(110, 90, 75);
     border: none;
     padding:5px 20px;
     font-size:15px;
     cursor:pointer;
+    font-family:serif;
+    font-weight: bold;
 }
 
 .register-form-error{
     color:red;
+    margin-top:5px;
 }

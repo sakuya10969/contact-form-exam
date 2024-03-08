@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Category;
 
 class ContactFactory extends Factory
 {
@@ -22,7 +23,6 @@ class ContactFactory extends Factory
             'address' => $this->faker->address,
             'building' => $this->faker->secondaryAddress,
             'detail' => $this->faker->text,
-            "category_id" => $this->faker->randomElement([1,2,3,4,5]),
-        ];
-    }
+            "category_id" =>$this->faker->randomElement([1,2,3,4,5]),
+        ];}
 }

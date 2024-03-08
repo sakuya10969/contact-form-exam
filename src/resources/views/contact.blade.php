@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -15,13 +16,15 @@
         </div>
     </header>
 
+
+
     <main>
         <div class="contact-form-content">
             <div class="contact-form-heading">
                 <h2>Contact</h2>
             </div>
 
-            <form class="contact-form" action="/confirm" method="post">
+            <form class="contact-form" action="/contact" method="post">
                 @csrf
                 <table>
                     <tr>
@@ -54,9 +57,12 @@
                         <th>性別<span class="rice">※</span></th>
                         <td>
                             <div class="contact-form-gender-input">
-                                <label><input type="radio" name="gender" id="male" checked>男性</label>
-                                <label><input type="radio" name="gender" id="female">女性</label>
-                                <label><input type="radio" name="gender" id="others">その他</label>
+                                <label><input type="radio" name="gender"
+                                value="male"  checked>男性</label>
+                                <label><input type="radio" name="gender"
+                                value="female">女性</label>
+                                <label><input type="radio" name="gender"
+                                value="other">その他</label>
                             </div>
                         </td>
                     </tr>
@@ -151,7 +157,7 @@
                         <td>
                             <div class="contact-form-content-input">
                                 <select name="content">
-                                    <option value="" readonly>選択してください</option>
+                                    <option value="" disabled selected>選択してください</option>
                                     <option value="1">商品のお届けについて</option>
                                     <option value="2">商品の交換について</option>
                                     <option value="3">商品トラブル</option>

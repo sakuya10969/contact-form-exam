@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -14,6 +15,8 @@
             <h2>FashonablyLate</h2>
         </div>
     </header>
+
+
 
     <main>
         <div class="confirm-form-content">
@@ -64,7 +67,7 @@
             </table>
 
             <div class="confirm-btn">
-                <form class="confirm-submit-btn" action="/thanks" method="post">
+                <form class="confirm-submit-btn" action="/confirm" method="post">
                     @csrf
                     <button type="submit">送信</button>
                 </form>
@@ -74,4 +77,5 @@
             </div>
         </div>
     </main>
+
 </body>

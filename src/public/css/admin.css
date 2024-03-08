@@ -1,0 +1,189 @@
+body{
+    font-family:serif;
+    font-weight:bold;
+}
+
+header {
+    height: 7vh;
+}
+
+.header-ttl {
+    text-align: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+.header-ttl h2 {
+    font-size: 30px;
+    color: rgb(110, 90, 75);
+    padding-top: 10px;
+}
+
+.header-btn {
+    text-align: right;
+    margin: -60px 30px 0 0;
+}
+
+.header-btn a {
+    color: burlywood;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid burlywood;
+    cursor: pointer;
+}
+
+
+
+
+main {
+    height: 93vh;
+}
+
+.admin-form-heading {
+    text-align: center;
+}
+
+.admin-form-heading h2 {
+    font-size: 30px;
+    color: rgb(110, 90, 75);
+    padding-top: 20px;
+}
+
+table{
+    margin:0 auto;
+    border-collapse:collapse;
+    height:450px;
+    width:1100px;
+}
+
+tr{
+    border-collapse:collapse;
+    border:1px solid rgb(110, 90, 75);
+}
+
+th{
+    background-color:rgb(110, 90, 75);
+    color:white;
+    text-align:left;
+    padding-left:40px;
+}
+
+td{
+    text-align:left;
+    color:rgb(110, 90, 75);
+    padding-left:40px;
+}
+
+.detail-btn{
+    color:burlywood;
+    border:1px solid burlywood;
+    font-family:serif;
+    padding:5px 15px;
+    background-color:white;
+    cursor:pointer;
+}
+
+.search-form-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+    transform:translateX(-17px);
+}
+
+.search-form{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin:0 16px 40px 16px;
+    width:1000px;
+}
+
+.search-area{
+    margin:0 17px;
+}
+
+.keyword-search-area{
+    width:250px;
+    border:1px solid gainsboro;
+    padding:10px 20px;
+    font-family:serif;
+    font-weight: bold;
+}
+
+.gender-search-area{
+    padding:13px 20px;
+    font-family:serif;
+    background-color:whitesmoke;
+    border:none;
+    width:90px;
+    font-weight: bold;
+}
+
+.content-search-area {
+    padding: 13px 20px;
+    font-family: serif;
+    background-color: whitesmoke;
+    border: none;
+    font-weight: bold;
+}
+
+.date-search-area{
+    padding:13px 20px;
+    font-family:serif;
+    background-color:whitesmoke;
+    border:none;
+    font-weight: bold;
+}
+
+.search-btn{
+    background-color:rgb(110, 90, 75);
+    color:white;
+    padding:10px 25px;
+    border:none;
+    cursor:pointer;
+    font-family:serif;
+    white-space:nowrap;
+    font-weight:bold;
+}
+
+.reset-btn{
+    transform:translateY(-21px);
+}
+
+.reset-btn button{
+    color:white;
+    background-color:rgba(110,90,75,0.5);
+    padding:10px 25px;
+    border:none;
+    font-family:serif;
+    cursor:pointer;
+    white-space:nowrap;
+    font-weight:bold;
+}
+
+.export-pagination{
+    margin:-15px auto 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:1000px;
+    transform:translateX(-50px);
+}
+
+.export-btn{
+    color:rgb(110, 90, 75);
+    background-color:gainsboro;
+    border:none;
+    font-family:serif;
+    padding:10px 25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.pagination{
+    width:1vw;
+    height:1vh;
+    white-space:nowrap;
+    color:rgb(110, 90, 75);
+    margin-bottom:30px;
+}

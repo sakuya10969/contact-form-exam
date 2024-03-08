@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -11,7 +12,7 @@
     <div class="thanks">
         <div class="thanks-surface">
             <h2>お問い合わせありがとうございました</h2>
-            <a href="/contact">HOME</a>
+            <a href="/">HOME</a>
         </div>
 
         <div class="thanks-background-message">

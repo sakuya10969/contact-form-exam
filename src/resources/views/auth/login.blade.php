@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -15,9 +15,11 @@
             <h2>FashonablyLate</h2>
         </div>
         <div class="header-btn">
-            <a href="/login">register</a>
+            <a href="/register">register</a>
         </div>
     </header>
+
+
 
     <main>
         <div class="login-form-content">
@@ -26,7 +28,7 @@
             </div>
 
 
-            <form class="login-form" action="/admin" method="post">
+            <form class="login-form" action="/login" method="post">
                 @csrf
                 <div class="login-form-item-content">
                     <div class="login-form-item">
@@ -37,7 +39,7 @@
                     </div>
                     <div class="login-form-error">
                         @error("email")
-                        {{message}}
+                        {{$message}}
                         @enderror
                     </div>
                 </div>
@@ -48,11 +50,11 @@
                         <div class="login-form-item-label">
                             <span>パスワード</span>
                         </div>
-                        <input type="text" name="password" value="{{old('password')}}" placeholder="例:coachtech1106">
+                        <input type="text" name="password" placeholder="例:coachtech1106">
                     </div>
                     <div class="login-form-error">
                         @error("password")
-                        {{message}}
+                        {{$message}}
                         @enderror
                     </div>
                 </div>
@@ -61,7 +63,7 @@
                     <button class="login-btn" type="submit">ログイン</button>
                 </div>
             </form>
-            </form>
+        </div>
     </main>
 
 </body>
