@@ -8,10 +8,7 @@ use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use App\Models\Contact;
-use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
-use Laravel\Fortify\Contracts\LoginResponse;
-use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
@@ -33,12 +30,12 @@ class ContactController extends Controller
     public function login()
     {
         return view("auth.login");
-    }
+    }   //ログイン画面
 
     public function toAdmin(LoginRequest $request)
     {
-        return redirect("/admin");
-    }
+        redirect("/admin");
+    }   //管理画面への遷移
 
 
 
@@ -130,5 +127,5 @@ class ContactController extends Controller
         $searchResults = $query->paginate(7);
 
         return view("search", compact("searchResults"));
-    }
+    }   //検索機能
 }
