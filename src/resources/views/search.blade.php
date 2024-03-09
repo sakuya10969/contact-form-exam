@@ -46,11 +46,11 @@
                     <div class="search-area">
                         <select class="content-search-area" name="content">
                             <option value="" selected>お問い合わせの種類</option>
-                            <option value="商品のお届けについて">商品のお届けについて</option>
-                            <option value="商品の交換について">商品の交換について</option>
-                            <option value="商品トラブル">商品トラブル</option>
-                            <option value="ショップへのお問い合わせ">ショップへのお問い合わせ</option>
-                            <option value="その他">その他</option>
+                            <option value="1">商品のお届けについて</option>
+                            <option value="2">商品の交換について</option>
+                            <option value="3">商品トラブル</option>
+                            <option value="4">ショップへのお問い合わせ</option>
+                            <option value="5">その他</option>
                         </select>
                     </div>
                     <div class="search-area">
@@ -72,7 +72,7 @@
             <div class="export-pagination">
                 <button class="export-btn">エクスポート</button>
                 <div class="pagination">
-                    {{$contactItems->links()}}
+                    {{$searchResults->links()}}
                 </div>
             </div>
 
@@ -84,12 +84,12 @@
                     <th>お問い合わせの種類</th>
                     <th></th>
                 </tr>
-                @foreach($contactItems as $contactItem)
+                @foreach($searchResults as $searchResult)
                 <tr>
-                    <td>{{$contactItem->last_name}} {{$contactItem->first_name}}</td>
-                    <td>{{$contactItem->genderToString($contactItem["gender"])}}</td>
-                    <td>{{$contactItem->email}}</td>
-                    <td>{{$contactItem->category->content}}</td>
+                    <td>{{$searchResult->last_name}} {{$searchResult->first_name}}</td>
+                    <td>{{$searchResult->genderToString($searchResult["gender"])}}</td>
+                    <td>{{$searchResult->email}}</td>
+                    <td>{{$searchResult->category->content}}</td>
                     <td><button class="detail-btn">詳細</button></td>
                 </tr>
                 @endforeach

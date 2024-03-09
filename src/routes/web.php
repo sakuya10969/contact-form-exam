@@ -27,10 +27,13 @@ Route::post("/", [ContactController::class, "toConfirm"]);
 
 
 Route::get("/confirm", [ContactController::class, "confirm"]);
-Route::post("confirm", [ContactController::class, "submit"]);
+Route::post("/confirm", [ContactController::class, "submit"]);
 
 
 Route::get("/thanks", [ContactController::class, "thanks"]);
 
-
 Route::get("/admin", [ContactController::class, "admin"]);
+
+Route::get("/search", [ContactController::class, "search"]);
+
+Route::get("reset", [ContactController::class, "admin"]);

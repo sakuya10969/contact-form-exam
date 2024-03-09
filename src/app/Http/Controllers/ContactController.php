@@ -10,13 +10,15 @@ use App\Models\User;
 use App\Models\Contact;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Fortify\Contracts\LoginResponse;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
     public function register()
     {
         return view("auth.register");
-    }
+    }   //ユーザー登録画面
 
     public function signUp(RegisterRequest $request)
     {
@@ -24,7 +26,7 @@ class ContactController extends Controller
         User::create($register);
 
         return redirect("/login");
-    }
+    }   //ユーザー登録機能
 
 
 
@@ -33,7 +35,7 @@ class ContactController extends Controller
         return view("auth.login");
     }
 
-    public function toAdmin()
+    public function toAdmin(LoginRequest $request)
     {
         return redirect("/admin");
     }
@@ -43,34 +45,44 @@ class ContactController extends Controller
     public function contact()
     {
         return view("contact");
-    }
+    }   //問い合わせフォーム画面
 
     public function toConfirm(ContactRequest $request)
     {
         $contactItem = $request->only(["first_name", "last_name", "gender", "email", "tell", "address", "building", "content", "detail"]);
 
-        $contactItem["content"] = Category::contentToString($contactItem["content"]);
+        $contact = new Contact();
+
+        $contactItem["gender"] = $contact->genderToString($contactItem["gender"]);
+
+        session()->put("contactItem", $contactItem);
+
 
         return redirect("/confirm");
-    }
+    }   //問い合わせ内容確認画面への遷移
 
 
 
     public function confirm()
     {
-        return view("confirm");
-    }
+        $contactItem = session("contactItem");
 
-    public function submit(ContactRequest $request)
+        return view("confirm", compact("contactItem"));
+    }   //問い合わせ内容確認画面
+
+    public function submit(Request $request)
     {
-        $contactItem = $request->only(["first_name", "last_name", "gender", "email", "tell", "address", "building", "content", "detail"]);
+        $contactItem = session("contactItem");
 
-        $contactItem["content"] = Category::contentToString($contactItem["content"]);
+        $contact = new Contact();
+        $contactItem["gender"] = $contact->genderToInt($contactItem["gender"]);
 
         Contact::create($contactItem);
 
+        session()->forget("contactItem");
+
         return redirect("/thanks");
-    }
+    }   //問い合わせ内容保存、サンクス画面へ遷移
 
 
 
@@ -78,12 +90,45 @@ class ContactController extends Controller
     {
         $contactItems = Contact::with("category")->Paginate(7);
         return view("admin", compact("contactItems"));
-    }
+    }   //管理画面
 
 
 
     public function thanks()
     {
         return view("thanks");
+    }   //サンクス画面
+
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input("keyword");
+        $gender = $request->input("gender");
+        $content = $request->input("content");
+        $date = $request->input("date");
+
+        $query = Contact::with("category");
+
+        if (!empty($keyword)) {
+            $query->keywordSearch($keyword);
+        }
+
+        if (!empty($gender)) {
+            $query->genderSearch($gender);
+        }
+
+        if (!empty($content)) {
+            $query->whereHas("category", function ($query) use ($content) {
+                $query->contentSearch($content);
+            });
+        }
+
+        if (!empty($date)) {
+            $query->dateSearch($date);
+        }
+
+        $searchResults = $query->paginate(7);
+
+        return view("search", compact("searchResults"));
     }
 }

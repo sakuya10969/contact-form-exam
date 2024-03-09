@@ -27,42 +27,42 @@
             <table>
                 <tr>
                     <th>お名前</th>
-                    <td>sakuya</td>
+                    <td>{{$contactItem["last_name"]}} {{$contactItem["first_name"]}}</td>
                 </tr>
 
                 <tr>
                     <th>性別</th>
-                    <td>male</td>
+                    <td>{{$contactItem["gender"]}}</td>
                 </tr>
 
                 <tr>
                     <th>メールアドレス</th>
-                    <td>sakuya@lfc.com</td>
+                    <td>{{$contactItem["email"]}}</td>
                 </tr>
 
                 <tr>
                     <th>電話番号</th>
-                    <td>000</td>
+                    <td>{{$contactItem["tell"]}}</td>
                 </tr>
 
                 <tr>
                     <th>住所</th>
-                    <td>Tokyo</td>
+                    <td>{{$contactItem["address"]}}</td>
                 </tr>
 
                 <tr>
                     <th>建物名</th>
-                    <td>Tokyo T</td>
+                    <td>{{$contactItem["building"]}}</td>
                 </tr>
 
                 <tr>
                     <th>お問い合わせの種類</th>
-                    <td>a</td>
+                    <td>{{$contactItem["content"]}}</td>
                 </tr>
 
                 <tr>
                     <th>お問い合わせ内容</th>
-                    <td>text</td>
+                    <td>{{$contactItem["detail"]}}</td>
                 </tr>
             </table>
 
@@ -72,7 +72,7 @@
                     <button type="submit">送信</button>
                 </form>
                 <div class="confirm-correction-link">
-                    <a href="/contact">修正</a>
+                    <a href="/">修正</a>
                 </div>
             </div>
         </div>

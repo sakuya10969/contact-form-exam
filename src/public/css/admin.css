@@ -3,10 +3,6 @@ body{
     font-weight:bold;
 }
 
-header {
-    height: 7vh;
-}
-
 .header-ttl {
     text-align: center;
     border-bottom: 1px solid gainsboro;
@@ -35,7 +31,7 @@ header {
 
 
 main {
-    height: 93vh;
+    height:90vh;
 }
 
 .admin-form-heading {
@@ -51,8 +47,8 @@ main {
 table{
     margin:0 auto;
     border-collapse:collapse;
-    height:450px;
     width:1100px;
+    height:50vh;
 }
 
 tr{
@@ -117,6 +113,7 @@ td{
     border:none;
     width:90px;
     font-weight: bold;
+    cursor:pointer;
 }
 
 .content-search-area {
@@ -125,6 +122,7 @@ td{
     background-color: whitesmoke;
     border: none;
     font-weight: bold;
+    cursor:pointer;
 }
 
 .date-search-area{
@@ -133,6 +131,7 @@ td{
     background-color:whitesmoke;
     border:none;
     font-weight: bold;
+    cursor:pointer;
 }
 
 .search-btn{

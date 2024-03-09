@@ -3,10 +3,6 @@ body{
     font-weight: bold;
 }
 
-header{
-    height:7vh;
-}
-
 .header-ttl{
     text-align:center;
 }
@@ -25,7 +21,7 @@ header{
 .header-btn a{
     color:burlywood;
     text-decoration:none;
-    padding:5px 15px;
+    padding:5px 20px;
     border: 1px solid burlywood;
     cursor:pointer;
 }
@@ -35,7 +31,7 @@ header{
 
 
 main{
-    height:93vh;
+    height:90vh;
     background-color:oldlace;
 }
 
@@ -52,7 +48,7 @@ main{
 
 .register-form{
     margin:0 auto;
-    width:600px;
+    width:650px;
     height:550px;
     display:flex;
     flex-direction:column;
@@ -72,13 +68,14 @@ main{
 }
 
 .register-form-item input{
-    width:350px;
+    width:360px;
     padding:15px 20px;
     margin-top:10px;
     background-color:whitesmoke;
     border:none;
     font-family:serif;
     font-weight: bold;
+    font-size:15px;
 }
 
 .register-form-btn{
@@ -89,7 +86,7 @@ main{
     color:white;
     background-color: rgb(110, 90, 75);
     border: none;
-    padding:5px 20px;
+    padding:5px 25px;
     font-size:15px;
     cursor:pointer;
     font-family:serif;
@@ -99,4 +96,5 @@ main{
 .register-form-error{
     color:red;
     margin-top:5px;
+    font-size:13px;
 }

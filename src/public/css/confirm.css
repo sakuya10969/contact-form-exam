@@ -68,7 +68,7 @@ td{
 
 .confirm-submit-btn,.confirm-correction-link{
     display:inline-block;
-    margin:0 15px;
+    margin:10px 15px 0;
 }
 
 .confirm-submit-btn button{
