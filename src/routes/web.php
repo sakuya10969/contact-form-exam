@@ -14,26 +14,17 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get("/register", [ContactController::class, "register"]);
+
 Route::post("/register", [ContactController::class, "signUp"]);
-
-
-Route::get("/login", [ContactController::class, "login"])->name("login");
-Route::post("/login", [ContactController::class, "toAdmin"]);
-
-
 Route::get("/", [ContactController::class, "contact"]);
 Route::post("/", [ContactController::class, "toConfirm"]);
-
-
 Route::get("/confirm", [ContactController::class, "confirm"]);
 Route::post("/confirm", [ContactController::class, "submit"]);
-
-
 Route::get("/thanks", [ContactController::class, "thanks"]);
 
-Route::get("/admin", [ContactController::class, "admin"]);
 
-Route::get("/search", [ContactController::class, "search"]);
-
-Route::get("reset", [ContactController::class, "admin"]);
+Route::middleware("auth")->group(function(){
+    Route::get("/admin", [ContactController::class, "admin"]);
+    Route::get("/search", [ContactController::class, "search"]);
+    Route::get("reset", [ContactController::class, "admin"]);
+});

@@ -9,6 +9,7 @@ use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ContactController extends Controller
 {
@@ -20,6 +21,7 @@ class ContactController extends Controller
     public function signUp(RegisterRequest $request)
     {
         $register = $request->only(["name", "email", "password"]);
+        $register["password"] = Hash::make($register["password"]);
         User::create($register);
 
         return redirect("/login");
